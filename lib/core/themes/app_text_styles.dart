@@ -8,7 +8,9 @@ class AppTextStyles {
   static TextStyle font30Bold = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 30.sp,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
+    height: 1.30,
+    letterSpacing: 0.90,
   );
 
   static TextStyle font25Bold = TextStyle(

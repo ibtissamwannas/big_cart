@@ -1,0 +1,11 @@
+import 'package:big_cart/features/onboarding/presentation/widgets/onboarding_Items.dart';
+import 'package:flutter/material.dart';
+
+class OnboardingPage extends StatelessWidget {
+  const OnboardingPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: OnboardingItems());
+  }
+}

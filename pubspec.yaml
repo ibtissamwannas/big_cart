@@ -41,6 +41,7 @@ flutter:
 
   assets:
     - assets/translations/
+    - assets/images/
   fonts:
     - family: Poppins
       fonts:

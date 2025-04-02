@@ -23,6 +23,7 @@ class AppThemes {
       bodyLarge: AppTextStyles.font15Medium.copyWith(color: Colors.black),
       bodyMedium: AppTextStyles.font12Medium.copyWith(color: Colors.black87),
       bodySmall: AppTextStyles.font10Medium.copyWith(color: Colors.black54),
+      headlineLarge: AppTextStyles.font25Bold,
     ),
     colorScheme: const ColorScheme.light().copyWith(
       primary: AppColors.primary,
@@ -50,6 +51,8 @@ class AppThemes {
       bodyLarge: AppTextStyles.font15Medium.copyWith(color: Colors.white),
       bodyMedium: AppTextStyles.font12Medium.copyWith(color: Colors.white70),
       bodySmall: AppTextStyles.font10Medium.copyWith(color: Colors.white54),
+      headlineLarge: AppTextStyles.font25Bold,
+      headlineMedium: AppTextStyles.font20Bold,
     ),
 
     colorScheme: const ColorScheme.dark().copyWith(

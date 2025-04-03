@@ -11,7 +11,7 @@ class OnboardingEntity {
     required this.image,
   });
 
-  static const List<OnboardingEntity> onboardingList = [
+  static const onboardingList = <OnboardingEntity>[
     OnboardingEntity(
       title: 'Welcome to',
       description:

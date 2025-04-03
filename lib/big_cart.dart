@@ -16,9 +16,6 @@ class BigCart extends StatelessWidget {
         return MaterialApp.router(
           title: 'Big Cart',
           debugShowCheckedModeBanner: false,
-          theme: AppThemes.lightTheme,
-          darkTheme: AppThemes.darkTheme,
-          themeMode: ThemeMode.system,
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,

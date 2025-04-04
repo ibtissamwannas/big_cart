@@ -2,6 +2,7 @@ import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/core/themes/app_text_styles.dart';
 import 'package:big_cart/core/themes/colors.dart';
 import 'package:big_cart/core/utils/app_images.dart';
+import 'package:big_cart/core/utils/app_padding.dart';
 import 'package:big_cart/core/utils/spacing.dart';
 import 'package:big_cart/core/widgets/custom_elevated_button.dart';
 import 'package:big_cart/features/onboarding/domain/entities/onboarding_entity.dart';
@@ -59,15 +60,20 @@ class OnboardingBody extends StatelessWidget {
               Spacer(),
               OnboardingDots(),
               verticalSpace(20),
-              CustomElevatedButton(
-                text: isLast ? 'Get Started' : 'Continue',
-                onPressed:
-                    isLast
-                        ? () {
-                          context.go(Routes.welcome);
-                          context.read<OnboardingCubit>().saveOnboarding();
-                        }
-                        : context.read<OnboardingCubit>().nextPage,
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppPadding.horizontal(),
+                ),
+                child: CustomElevatedButton(
+                  text: isLast ? 'Get Started' : 'Continue',
+                  onPressed:
+                      isLast
+                          ? () {
+                            context.go(Routes.welcome);
+                            context.read<OnboardingCubit>().saveOnboarding();
+                          }
+                          : context.read<OnboardingCubit>().nextPage,
+                ),
               ),
               verticalSpace(40),
             ],

@@ -49,6 +49,11 @@ class AppTextStyles {
     fontSize: 10.sp,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle font18Medium = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+  );
 
   // Regular
   static TextStyle font15Regular = TextStyle(

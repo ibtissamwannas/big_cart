@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/bigcart.png
   static const String imagesBigcart = "assets/images/bigcart.png";
 
+  /// Assets for imagesGoogleIcon
+  /// assets/images/google_icon.svg
+  static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
   /// Assets for imagesOnboarding1
   /// assets/images/onboarding1.png
   static const String imagesOnboarding1 = "assets/images/onboarding1.png";
@@ -21,5 +25,13 @@ class Assets {
   /// Assets for imagesOnboarding4
   /// assets/images/onboarding4.png
   static const String imagesOnboarding4 = "assets/images/onboarding4.png";
+
+  /// Assets for imagesProfileIcon
+  /// assets/images/profile_icon.svg
+  static const String imagesProfileIcon = "assets/images/profile_icon.svg";
+
+  /// Assets for imagesWelcome
+  /// assets/images/welcome.png
+  static const String imagesWelcome = "assets/images/welcome.png";
 }
 

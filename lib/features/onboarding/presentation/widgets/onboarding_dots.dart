@@ -25,7 +25,7 @@ class OnboardingDots extends StatelessWidget {
                   color:
                       state == index
                           ? AppColors.primaryDark
-                          : AppColors.lightGreyColor,
+                          : AppColors.lightGrey,
                   shape: OvalBorder(),
                 ),
               ),

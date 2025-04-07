@@ -28,7 +28,7 @@ class AuthRedirectTextRow extends StatelessWidget {
                     text: promtText,
                     style: AppTextStyles.font15Regular.copyWith(
                       letterSpacing: 0.45,
-                      color: AppColors.greyColor,
+                      color: AppColors.grey,
                     ),
                   ),
                   TextSpan(

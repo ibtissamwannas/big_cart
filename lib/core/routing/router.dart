@@ -12,7 +12,9 @@ final GoRouter router = GoRouter(
     final isFinishOnbarding = await SharedPrefHelper.getBool(
       SharedPrefKeys.finishOnbarding,
     );
-    if (isFinishOnbarding) {
+    final goingToOnboarding = state.fullPath == Routes.onboarding;
+
+    if (isFinishOnbarding && goingToOnboarding) {
       return Routes.welcome;
     }
     return null;
@@ -22,13 +24,7 @@ final GoRouter router = GoRouter(
       path: Routes.onboarding,
       builder: (context, state) => const Onboarding(),
     ),
-    GoRoute(
-      path: Routes.welcome,
-      builder: (context, state) => const Welcome(),
-    ),
-    GoRoute(
-      path: Routes.login,
-      builder: (context, state) => const Login(),
-    ),
+    GoRoute(path: Routes.welcome, builder: (context, state) => const Welcome()),
+    GoRoute(path: Routes.login, builder: (context, state) => const Login()),
   ],
 );

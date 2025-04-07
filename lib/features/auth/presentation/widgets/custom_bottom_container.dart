@@ -8,17 +8,19 @@ class CustomBottomContainer extends StatelessWidget {
   final String title;
   final String subtitle;
   final Widget fieldsWidegt;
+  final double height;
   const CustomBottomContainer({
     super.key,
     required this.title,
     required this.subtitle,
     required this.fieldsWidegt,
+    this.height = 0.4,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.4,
+      height: MediaQuery.of(context).size.height * height,
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(horizontal: AppPadding.horizontal()),
       decoration: ShapeDecoration(
@@ -42,7 +44,7 @@ class CustomBottomContainer extends StatelessWidget {
           Text(
             subtitle,
             style: AppTextStyles.font15Medium.copyWith(
-              color: AppColors.greyColor,
+              color: AppColors.grey,
               letterSpacing: 0.45,
             ),
           ),

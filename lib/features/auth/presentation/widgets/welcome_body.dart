@@ -16,7 +16,7 @@ class WelcomeBody extends StatelessWidget {
     return SizedBox.expand(
       child: Stack(
         children: [
-          const BackgroundTextAndImage(),
+          const BackgroundTextAndImage(imagePath: Assets.imagesWelcome),
           Positioned(
             bottom: 0,
             child: CustomBottomContainer(

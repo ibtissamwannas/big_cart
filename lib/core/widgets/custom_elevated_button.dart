@@ -12,7 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     super.key,
     this.text,
-    this.onPressed,
+    required this.onPressed,
     this.rowWidget,
     this.isGradient = true,
   });

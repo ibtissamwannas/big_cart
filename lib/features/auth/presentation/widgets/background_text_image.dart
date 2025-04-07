@@ -1,11 +1,16 @@
 import 'package:big_cart/core/themes/app_text_styles.dart';
-import 'package:big_cart/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class BackgroundTextAndImage extends StatelessWidget {
   final bool withArrowIcon;
-  const BackgroundTextAndImage({super.key, this.withArrowIcon = false});
+  final String imagePath;
+  const BackgroundTextAndImage({
+    super.key,
+    this.withArrowIcon = false,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class BackgroundTextAndImage extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(Assets.imagesWelcome),
+          image: AssetImage(imagePath),
           fit: BoxFit.fitHeight,
         ),
       ),
@@ -24,11 +29,14 @@ class BackgroundTextAndImage extends StatelessWidget {
           alignment: Alignment.topCenter,
           children: [
             if (withArrowIcon)
-              Padding(
-                padding: EdgeInsetsDirectional.only(start: 15.w),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Icon(Icons.arrow_back_sharp, color: Colors.white),
+              InkWell(
+                onTap: () => context.pop(),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.only(start: 15.w),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Icon(Icons.arrow_back_sharp, color: Colors.white),
+                  ),
                 ),
               ),
             Text(

@@ -27,7 +27,7 @@ class OnboardingBody extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
-            color: (index == 0) ? AppColors.shadowColor : Colors.white,
+            color: (index == 0) ? AppColors.shadow : Colors.white,
             boxShadow:
                 (index == 0)
                     ? [

@@ -6,9 +6,21 @@ class Assets {
   /// assets/images/bigcart.png
   static const String imagesBigcart = "assets/images/bigcart.png";
 
+  /// Assets for imagesEmail
+  /// assets/images/email.svg
+  static const String imagesEmail = "assets/images/email.svg";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
+  /// Assets for imagesLock
+  /// assets/images/lock.svg
+  static const String imagesLock = "assets/images/lock.svg";
+
+  /// Assets for imagesLoginBackground
+  /// assets/images/login_background.png
+  static const String imagesLoginBackground = "assets/images/login_background.png";
 
   /// Assets for imagesOnboarding1
   /// assets/images/onboarding1.png
@@ -25,6 +37,10 @@ class Assets {
   /// Assets for imagesOnboarding4
   /// assets/images/onboarding4.png
   static const String imagesOnboarding4 = "assets/images/onboarding4.png";
+
+  /// Assets for imagesPassword
+  /// assets/images/password.svg
+  static const String imagesPassword = "assets/images/password.svg";
 
   /// Assets for imagesProfileIcon
   /// assets/images/profile_icon.svg

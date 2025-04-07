@@ -16,7 +16,7 @@ class DescriptionText extends StatelessWidget {
         OnboardingEntity.onboardingList[index].description,
         textAlign: TextAlign.center,
         style: AppTextStyles.font15Medium.copyWith(
-          color: AppColors.greyColor,
+          color: AppColors.grey,
           letterSpacing: 0.45,
         ),
       ),

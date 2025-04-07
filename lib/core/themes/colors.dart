@@ -6,12 +6,13 @@ class AppColors {
   static const Color backgroundLight = Color(0xFFF4F5F9);
   static const Color backgroundNeutral = Color(0xFFF5F5F5);
   static const Color textPrimary = Color(0xFF000000);
-  static const Color greyColor = Color(0xFF868889);
-  static const Color shadowColor = Color(0xFFC4C4C4);
-  static const Color lightGreyColor = Color(0xFFDBDBDB);
+  static const Color grey = Color(0xFF868889);
+  static const Color shadow = Color(0xFFC4C4C4);
+  static const Color lightGrey = Color(0xFFDBDBDB);
 
   // Link
   static const Color link = Color(0xFF1A0DAB);
+  static const Color lightBlue = Color(0xFF407EC7);
 
   // Border
   static const Color border = Color(0xFFEBEBEB);

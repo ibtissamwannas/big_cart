@@ -1,43 +1,54 @@
 import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/core/utils/app_images.dart';
 import 'package:big_cart/core/utils/spacing.dart';
+import 'package:big_cart/core/widgets/custom_elevated_button.dart';
+import 'package:big_cart/core/widgets/custom_text_form_field.dart';
 import 'package:big_cart/features/auth/presentation/widgets/auth_redirect_text_row.dart';
 import 'package:big_cart/features/auth/presentation/widgets/background_text_image.dart';
 import 'package:big_cart/features/auth/presentation/widgets/custom_bottom_container.dart';
-import 'package:big_cart/features/auth/presentation/widgets/custom_elevated_button_with_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class WelcomeBody extends StatelessWidget {
-  const WelcomeBody({super.key});
+class SignUpBody extends StatelessWidget {
+  const SignUpBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox.expand(
       child: Stack(
         children: [
-          const BackgroundTextAndImage(imagePath: Assets.imagesWelcome1),
+          const BackgroundTextAndImage(
+            imagePath: Assets.imagesSingupBg1,
+            withArrowIcon: true,
+          ),
           Positioned(
             bottom: 0,
             child: CustomBottomContainer(
-              title: 'Welcome',
-              subtitle:
-                  'Discover a smarter way to shop for groceries — fast, fresh, and delivered.',
+              height: 0.54,
+              title: 'Create an account',
+              subtitle: 'Quickly create an account',
               fieldsWidegt: Column(
                 children: [
                   verticalSpace(20),
-                  CustomElevatedButtonWithIcon(
-                    imagePath: Assets.imagesGoogleIcon,
-                    text: 'Continue with Google',
-                    textColor: Colors.black,
-                    isGradient: false,
+                  CustomTextFormField(
+                    hint: 'Email Address',
+                    prefixIcon: Assets.imagesEmail,
                   ),
-                  verticalSpace(10),
-                  CustomElevatedButtonWithIcon(
-                    imagePath: Assets.imagesProfileIcon,
-                    text: 'Create an account',
-                    textColor: Colors.white,
+                  verticalSpace(5),
+                  CustomTextFormField(
+                    hint: 'Phone',
+                    prefixIcon: Assets.imagesTelephone,
                   ),
+                  verticalSpace(5),
+                  CustomTextFormField(
+                    hint: 'Password',
+                    prefixIcon: Assets.imagesLock,
+                    isPassword: true,
+                    suffixIcon: Assets.imagesPassword,
+                  ),
+
+                  verticalSpace(20),
+                  CustomElevatedButton(text: 'Login', onPressed: () {}),
                   verticalSpace(20),
                   AuthRedirectTextRow(
                     promtText: 'Already have an account ? ',
@@ -46,6 +57,7 @@ class WelcomeBody extends StatelessWidget {
                       context.push(Routes.login);
                     },
                   ),
+                  verticalSpace(20),
                 ],
               ),
             ),

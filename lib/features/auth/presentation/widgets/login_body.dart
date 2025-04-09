@@ -1,3 +1,4 @@
+import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/core/utils/app_images.dart';
 import 'package:big_cart/core/utils/spacing.dart';
 import 'package:big_cart/core/widgets/custom_elevated_button.dart';
@@ -7,6 +8,7 @@ import 'package:big_cart/features/auth/presentation/widgets/auth_redirect_text_r
 import 'package:big_cart/features/auth/presentation/widgets/background_text_image.dart';
 import 'package:big_cart/features/auth/presentation/widgets/custom_bottom_container.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({super.key});
@@ -17,7 +19,7 @@ class LoginBody extends StatelessWidget {
       child: Stack(
         children: [
           const BackgroundTextAndImage(
-            imagePath: Assets.imagesLoginBackground,
+            imagePath: Assets.imagesLoginBg,
             withArrowIcon: true,
           ),
           Positioned(
@@ -44,7 +46,9 @@ class LoginBody extends StatelessWidget {
                   AuthForgetPasswordRow(
                     rememberMe: false,
                     onRememberChanged: (bool? value) {},
-                    onForgotPasswordTap: () {},
+                    onForgotPasswordTap: () {
+                      context.push(Routes.forgetpassword);
+                    },
                   ),
                   verticalSpace(10),
                   CustomElevatedButton(text: 'Login', onPressed: () {}),
@@ -53,7 +57,7 @@ class LoginBody extends StatelessWidget {
                     promtText: 'Don’t have an account ? ',
                     actionText: 'Sign up',
                     onTap: () {
-                      // context.push(Routes.login);
+                      context.push(Routes.signup);
                     },
                   ),
                   verticalSpace(20),

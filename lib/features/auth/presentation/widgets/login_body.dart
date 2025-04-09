@@ -46,7 +46,9 @@ class LoginBody extends StatelessWidget {
                   AuthForgetPasswordRow(
                     rememberMe: false,
                     onRememberChanged: (bool? value) {},
-                    onForgotPasswordTap: () {},
+                    onForgotPasswordTap: () {
+                      context.push(Routes.forgetpassword);
+                    },
                   ),
                   verticalSpace(10),
                   CustomElevatedButton(text: 'Login', onPressed: () {}),

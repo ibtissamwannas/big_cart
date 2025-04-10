@@ -48,7 +48,10 @@ class SignUpBody extends StatelessWidget {
                   ),
 
                   verticalSpace(20),
-                  CustomElevatedButton(text: 'Login', onPressed: () {}),
+                  CustomElevatedButton(
+                    text: 'Sign Up',
+                    onPressed: () => context.push(Routes.verifyotp),
+                  ),
                   verticalSpace(20),
                   AuthRedirectTextRow(
                     promtText: 'Already have an account ? ',

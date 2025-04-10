@@ -4,4 +4,5 @@ abstract final class Routes {
   static const login = '/login';
   static const signup = '/signup';
   static const forgetpassword = '/forgetpassword';
+  static const verifyotp = '/verifyotp';
 }
